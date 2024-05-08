@@ -1,0 +1,554 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #191919;
+  text-decoration: none !important;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #191919;
+  word-break: keep-all;
+  font-size: 10px;
+  position: relative;
+}
+/* 공톹요소 */
+.wrap {
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
+}
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.sub-title {
+  font-size: 3rem;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+/* 베스트 후기 top */
+.best-sub {
+  position: relative;
+  display: block;
+}
+.best-sub .inner {
+  max-width: 800px;
+}
+.gj-top {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+.top1 {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  background-color: #f0b18f;
+  border-radius: 20px;
+  color: #fff;
+  margin-top: 20px;
+}
+.gj-top .p1 {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f88222;
+  color: #fff;
+}
+.gj-top .p2 {
+  display: inline-block;
+  font-size: 1.4rem;
+  box-shadow: inset 0px -0.3em 0 0 rgba(255, 230, 216, 1);
+}
+/* 내용 */
+.festival-contents {
+  display: block;
+  position: relative;
+  margin: auto;
+}
+.festival-contents img {
+  display: block;
+  /* width: 100%; */
+  height: 350px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.festival-contents p {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  /* text-align: center; */
+}
+/* 지도 */
+.map {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+.map-info {
+  display: block;
+  font-size: 1.8rem;
+  padding: 10px 0 20px 0;
+  /* margin: 50px 0 20px 0; */
+}
+.map-cont {
+  display: block;
+  position: relative;
+}
+.map-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  gap: 20px;
+}
+.map-list p {
+  margin-left: 6px;
+  margin-top: 10px;
+}
+.map-list li {
+  font-size: 1.5rem;
+  text-align: left;
+  /* padding: 5px 0; */
+}
+.map-list li:nth-child(1) {
+  margin-top: 30px;
+}
+.map-list li span {
+  font-size: 1.3rem;
+  margin-left: 20px;
+  color: #f88222;
+}
+.map-list a {
+  text-decoration: underline;
+}
+.md-line {
+  display: block;
+  position: relative;
+  border-top: 1px solid #acacac;
+  margin: 30px 0px;
+}
+.instaG {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-left: 10px;
+}
+.instaG a {
+  display: inline-block;
+  text-decoration: none;
+}
+.instaG img {
+  display: block;
+  width: 50px;
+  margin: 0 auto;
+}
+.festName {
+  display: block;
+  font-size: 1.3rem;
+  color: #333;
+  margin-left: 0px !important;
+  margin-top: 5px !important;
+}
+.gohomePg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-left: 10px;
+}
+.gohomePg i {
+  display: block;
+  font-size: 4.5rem;
+}
+.gohomePg a {
+  display: inline-block;
+  text-decoration: none;
+}
+.lastLi {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+/* 맛집 추천 */
+.recomend-food-pohang {
+  position: relative;
+  display: block;
+}
+.recomend-food-pohang h2 {
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+.recomend-food-pohang ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.recomend-food-pohang li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.coffee {
+  position: relative;
+  display: block;
+}
+.coffee img {
+  width: 56px;
+  cursor: pointer;
+}
+.data_content {
+  position: relative;
+  display: block;
+}
+.data_content strong {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+.data_content p {
+  font-size: 1.4rem;
+}
+/* 추천 축제 */
+.recom {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.recom h2 {
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+}
+.recom-list {
+  display: block;
+  position: relative;
+}
+.sw-recom-conts {
+  width: 100%;
+  display: block;
+  position: relative;
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+  /* gap: 10px; */
+  /* margin: 0 auto; */
+}
+.recom-con {
+  display: block;
+  position: relative;
+  /* width: calc(100% / 3 - 10px); */
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  /* padding: 10px; */
+  /* margin-bottom: 20px; */
+  /* box-sizing: border-box; */
+  cursor: pointer;
+}
+.recom-con img {
+  display: block;
+  width: 100%;
+  height: 212px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.recom-con .recom-text {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  font-size: 1.6rem;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  padding: 20px;
+  border-radius: 5px;
+}
+.rest-name {
+  font-size: 1.2rem;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 유사한 맛집 추천 스와이퍼 스크롤바 */
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  bottom: -25px;
+}
+.swiper-scrollbar-drag {
+  /* background-color: rgba(141, 164, 208, 0.7); */
+  background-color: rgba(240, 177, 143, 0.7);
+  /* position: absolute;
+  bottom: 0px; */
+}
+/* 반응형 */
+@media screen and (max-width: 830px) {
+  .recom-con .recom-text {
+    font-size: 2rem;
+  }
+  .rest-name {
+    font-size: 1.4rem;
+    display: block;
+    width: 45px;
+    height: 45px;
+    color: #333;
+    display: flex;
+  }
+}
+@media screen and (max-width: 800px) {
+  .review-cont-right p {
+    font-size: 1.3rem;
+    height: 200px;
+    -webkit-line-clamp: 10;
+  }
+}
+@media screen and (max-width: 790px) {
+  .gj-top {
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .recomend-food-pohang ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .review-cont-right p {
+    font-size: 1.2rem;
+    height: 145px;
+    -webkit-line-clamp: 8;
+  }
+  .review-cont-mid img {
+    width: 150px;
+  }
+  .review-cont-left {
+    width: 50px;
+  }
+  .fastar {
+    font-size: 1rem;
+  }
+  .fa-heart {
+    font-size: 1.4rem;
+  }
+  .review-conts {
+    gap: 20px;
+  }
+  .fa-thumbs-up {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 650px) {
+  /* 지도 높이 변경 */
+  .wrap_map {
+    height: 300px !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* 방문자 사진 한 줄 2개 */
+  .reviewPhoto-list {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .reviewPhoto-list li {
+    width: calc(50% - 10px / 2);
+  }
+}
+@media screen and (max-width: 630px) {
+  .recom-con .recom-text {
+    font-size: 3.5rem;
+  }
+  .recom-con img {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .review-cont {
+    gap: 10px;
+  }
+  .review-cont-mid img {
+    width: 130px;
+  }
+  .review-cont-right p {
+    line-height: 1.4;
+    /* font-size: 1rem; */
+    height: 127px;
+    -webkit-line-clamp: 9;
+  }
+  .review-conts {
+    display: none;
+  }
+  .review-conts-600 {
+    display: block;
+  }
+  .review-conts-600 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+  }
+  /* 후기 하단 */
+  .review-cont-right p {
+    font-size: 1.5rem;
+    height: 145px;
+    -webkit-line-clamp: 7;
+  }
+  /* 후기 상단 */
+  .review-top-left,
+  .review-top-right {
+    gap: 10px;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .review-cont {
+    padding: 10px;
+  }
+  .review-cont-mid p {
+    font-size: 1rem;
+  }
+  .review-cont-mid img {
+    width: 130px;
+  }
+  .review-cont-right p {
+    line-height: 1.4;
+    font-size: 1rem;
+    height: 127px;
+    -webkit-line-clamp: 9;
+  }
+  .review-cont-left img {
+    width: 35px;
+  }
+  .fastar {
+    font-size: 0.8rem;
+  }
+  .fa-heart {
+    font-size: 1.3rem;
+  }
+  .recom-con .recom-text {
+    font-size: 3rem;
+  }
+  .recom-con img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .review-cont-mid p {
+    margin-bottom: 10px;
+  }
+  .review-cont-mid img {
+    width: 100px;
+  }
+  .review-cont-right p {
+    line-height: 1.3;
+    height: 105px;
+    -webkit-line-clamp: 8;
+  }
+  .fastar {
+    font-size: 0.8rem;
+  }
+  .fa-heart {
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  /* 유사 추천 */
+  .recom-con .recom-text {
+    font-size: 3rem;
+  }
+  .rest-name {
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+  }
+  /* 모달창 */
+  .modal-content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .review-cont-left {
+    width: 40px;
+  }
+  .review-cont-left img {
+    width: 30px;
+  }
+  .nickname {
+    display: block;
+    font-size: 0.9rem;
+  }
+  /* 후기 상단 */
+  .review-top-left,
+  .review-top-right {
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+  .review-cont-mid-600 img {
+    width: 100%;
+  }
+  .recom-con .recom-text {
+    font-size: 2rem;
+  }
+  .recom-con img {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .map-list li {
+    font-size: 1.3rem;
+  }
+  .map-list li span {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .recom h2 {
+    font-size: 1.6rem;
+  }
+  .recom-con .recom-text {
+    font-size: 1.6rem;
+  }
+  .recom-con img {
+    height: 200px;
+  }
+}
