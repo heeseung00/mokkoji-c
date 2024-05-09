@@ -51,6 +51,28 @@ body {
   /* margin-bottom: 50px; */
   font-weight: 700;
 }
+/* go top 버튼 ===================================================*/
+/* top 버튼 */
+.top-button.on {
+  position: absolute;
+  bottom: 320px;
+}
+.top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  transition: bottom 0.3s ease;
+}
+#go-top-btn-img {
+  width: 50px;
+  cursor: pointer;
+  display: none;
+}
 /* 헤더 ===================================================*/
 .header {
   position: fixed;
@@ -314,13 +336,7 @@ input::placeholder {
 .header .search .search-content-bot .search-hot .search-hot-list-right li {
   cursor: pointer;
 }
-.header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li:nth-child(5)
-  span {
+.header .search .search-content-bot .search-hot .search-hot-list-right li:nth-child(5) span {
   margin-right: 11px;
 }
 /* 모바일 헤더 =================================================== */
@@ -502,35 +518,14 @@ input::placeholder {
   font-weight: bold;
 }
 /* 모바일 검색 */
-.mb-header
-  > .search
-  > .container
-  > .inner
-  > .search-contents
-  > .search-content-top
-  > .hd-logo
-  > a
-  > img {
+.mb-header > .search > .container > .inner > .search-contents > .search-content-top > .hd-logo > a > img {
   width: 70px;
   height: 70px;
 }
-.mb-header
-  > .search
-  > .container
-  > .inner
-  > .search-contents
-  > .search-content-top
-  > .hd-logo {
+.mb-header > .search > .container > .inner > .search-contents > .search-content-top > .hd-logo {
   width: 70px;
 }
-.mb-header
-  > .search
-  > .container
-  > .inner
-  > .search-contents
-  > .search-content-top
-  > .hd-logo
-  > a {
+.mb-header > .search > .container > .inner > .search-contents > .search-content-top > .hd-logo > a {
   display: inline-block;
 }
 /* 검색 상단*/
@@ -633,12 +628,7 @@ input::placeholder {
   display: block;
   position: relative;
 }
-.mb-header-450
-  > .container
-  > .inner
-  > .mb-header-450-top
-  > .mb-menu-450
-  > button {
+.mb-header-450 > .container > .inner > .mb-header-450-top > .mb-menu-450 > button {
   border: none;
   background: none;
   cursor: pointer;
@@ -646,13 +636,7 @@ input::placeholder {
   top: -30px;
   right: 0;
 }
-.mb-header-450
-  > .container
-  > .inner
-  > .mb-header-450-top
-  > .mb-menu-450
-  > button
-  > i {
+.mb-header-450 > .container > .inner > .mb-header-450-top > .mb-menu-450 > button > i {
   font-size: 2.8rem;
 }
 .mb-header-450-top > button {
@@ -676,13 +660,7 @@ input::placeholder {
   left: 45%;
   transform: translateX(-50%);
 }
-.mb-header-450
-  > .container
-  > .inner
-  > .mb-header-450-top
-  > .logo-450
-  > a
-  > img {
+.mb-header-450 > .container > .inner > .mb-header-450-top > .logo-450 > a > img {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -824,13 +802,7 @@ input::placeholder {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-left
-  li
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-left li span {
   margin-right: 20px;
 }
 .mb-header .search .search-content-bot .search-hot .search-hot-list-left li {
@@ -840,25 +812,13 @@ input::placeholder {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-right li span {
   margin-right: 20px;
 }
 .mb-header .search .search-content-bot .search-hot .search-hot-list-right li {
   cursor: pointer;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li:nth-child(5)
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-right li:nth-child(5) span {
   margin-right: 11px;
 }
 /* 검색창 */
@@ -953,13 +913,7 @@ input::placeholder {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-left
-  li
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-left li span {
   margin-right: 20px;
 }
 .mb-header .search .search-content-bot .search-hotz .search-hot-list-left li {
@@ -969,23 +923,10 @@ input::placeholder {
   font-size: 1.6rem;
   line-height: 1.9;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-right li span {
   margin-right: 20px;
 }
-.mb-header
-  .search
-  .search-content-bot
-  .search-hot
-  .search-hot-list-right
-  li:nth-child(5)
-  a
-  span {
+.mb-header .search .search-content-bot .search-hot .search-hot-list-right li:nth-child(5) a span {
   margin-right: 11px;
 }
 /* 배너 */
@@ -1001,11 +942,11 @@ input::placeholder {
 .market-best {
   width: 100%;
   padding-left: 50px;
-  margin-top: 200px;
+  padding-top: 100px;
   position: relative;
   display: block;
   background-color: #fffcf0;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 .market-best .inner {
   display: flex;
@@ -1075,7 +1016,8 @@ input::placeholder {
 }
 .sw-best .swiper-slide {
   border-radius: 5px;
-  margin: 45px 0 25px 0.3%;
+  /* margin: 45px 0 25px 0.3%; */
+  margin: 5px 0 5px 0.3%;
   background-color: #fff;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   padding-bottom: 50px;
@@ -1130,91 +1072,279 @@ input::placeholder {
   color: #fff;
   background-color: #8da4d0;
 } */
-/* 시장 소개 =================================================== */
-/* 버튼 스와이프 */
+/* 시장 소개 */
+.market-info {
+  position: relative;
+  display: block;
+  /* background-color: #b8cbff; */
+}
+.market-info .container {
+  display: block;
+  position: relative;
+}
+.market-info .inner {
+  max-width: 1200px;
+}
+.market-info-contents {
+  display: flex;
+  justify-content: space-between;
+}
+/* 왼쪽 */
+.market-info-left {
+  width: 40%;
+  height: auto;
+  padding-bottom: 30px;
+  /* background-color: #e0e7fb; */
+}
+.map-bg {
+  width: 100%;
+}
+.market-info .market-info-left .map-bg {
+  background-image: url("../images/4marketinfo/main_map_daegu.png");
+  width: 395px;
+  height: 570px;
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s;
+  margin: 50px 0 0 50px;
+}
+.market-info .market-info-left .map-bg .map-pin-cont i {
+  display: block;
+  width: 34px;
+  height: 44px;
+  background: no-repeat center;
+  background-image: url("../images/4marketinfo/map_pin_off_02.png");
+  position: relative;
+  cursor: pointer;
+}
+.market-info .market-info-left .map-bg .map-pin-cont span {
+  display: none;
+}
+.market-info .market-info-left .map-bg .map-pin-cont:hover span {
+  padding: 14px 16px;
+  display: block;
+  background: #f88222;
+  border-radius: 15px;
+  position: absolute;
+  top: -64px;
+  left: 50%;
+  font-size: 1.3rem;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 11;
+}
+.market-info .market-info-left .map-bg .map-pin-cont span::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 7px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: no-repeat center;
+  background-image: url("../images/4marketinfo/map_after.png");
+}
+.market-info .market-info-left .map-bg .map-pin-cont:hover i {
+  display: block;
+  width: 34px;
+  height: 44px;
+  background: no-repeat center;
+  background-image: url("../images/4marketinfo/map_pin_on.png");
+  position: relative;
+}
+/* 클릭한 후에 요소가 화면에 계속 유지되는 스타일 */
+.market-info .market-info-left .map-bg .map-pin-cont.active span {
+  padding: 14px 16px;
+  display: block;
+  background: #f88222;
+  border-radius: 15px;
+  position: absolute;
+  top: -64px;
+  left: 50%;
+  font-size: 1.3rem;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 11;
+}
+.market-info .market-info-left .map-bg .map-pin-cont.active i {
+  display: block;
+  width: 34px;
+  height: 44px;
+  background-image: url("../images/4marketinfo/map_pin_on.png");
+  position: relative;
+}
+.market-info .market-info-left .map-bg .map-pin-cont.active span::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 7px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: no-repeat center;
+  background-image: url("../images/4marketinfo/map_after.png");
+}
+/* 대구 */
+.market-info .market-info-left .map-bg .daegu {
+  position: absolute;
+  top: 290px;
+  left: 230px;
+}
+/* 부산 */
+.market-info .market-info-left .map-bg .busan {
+  position: absolute;
+  top: 367px;
+  left: 275px;
+}
+/* 충북 */
+.market-info .market-info-left .map-bg .chungbuk {
+  position: absolute;
+  top: 172px;
+  left: 148px;
+}
+/* 충남 */
+.market-info .market-info-left .map-bg .chungnam {
+  position: absolute;
+  top: 215px;
+  left: 60px;
+}
+/* 대전 */
+.market-info .market-info-left .map-bg .daejeon {
+  position: absolute;
+  top: 235px;
+  left: 121px;
+}
+/* 강원 */
+.market-info .market-info-left .map-bg .gangwon {
+  position: absolute;
+  top: 76px;
+  left: 210px;
+}
+/* 광주 */
+.market-info .market-info-left .map-bg .gwangju {
+  position: absolute;
+  top: 375px;
+  left: 60px;
+}
+/* 경북 */
+.market-info .market-info-left .map-bg .gyeongbuk {
+  position: absolute;
+  top: 230px;
+  left: 250px;
+}
+/* 경기 */
+.market-info .market-info-left .map-bg .gyeonggi {
+  position: absolute;
+  top: 120px;
+  left: 116px;
+}
+/* 경남 */
+.market-info .market-info-left .map-bg .gyeongnam {
+  position: absolute;
+  top: 360px;
+  left: 180px;
+}
+/* 인천 */
+.market-info .market-info-left .map-bg .incheon {
+  position: absolute;
+  top: 100px;
+  left: 45px;
+}
+/* 제주 */
+.market-info .market-info-left .map-bg .jeju {
+  position: absolute;
+  top: 510px;
+  left: 105px;
+}
+/* 전북 */
+.market-info .market-info-left .map-bg .jeonbuk {
+  position: absolute;
+  top: 310px;
+  left: 90px;
+}
+/* 전남 */
+.market-info .market-info-left .map-bg .jeonnam {
+  position: absolute;
+  top: 400px;
+  left: 105px;
+}
+/* 세종 */
+.market-info .market-info-left .map-bg .sejong {
+  position: absolute;
+  top: 195px;
+  left: 100px;
+}
+/* 서울 */
+.market-info .market-info-left .map-bg .seoul {
+  position: absolute;
+  top: 85px;
+  left: 80px;
+}
+/* 울산 */
+.market-info .market-info-left .map-bg .ulsan {
+  position: absolute;
+  top: 320px;
+  left: 296px;
+}
+/* 1045일 때 왼쪽 */
+.market-info-1045 {
+  position: relative;
+  display: none;
+}
+.market-info-contents2 .market-contents2 {
+  position: relative;
+  display: none;
+  margin-top: 40px;
+}
 .local-cont > .local-bt-name {
   width: 60px;
   border-radius: 5px;
-  /* background-color: #ff9364; */
-  color: #bababa;
+  /* background-colo; r: #fe6b38;
+  color: #fff*/
   display: block;
-  border: 1px solid #bababa;
+  /* border: none; */
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   padding: 5px 0;
   text-align: center;
+  border: 1px solid #bababa;
+  background-color: #fff;
+  color: #bababa;
 }
 .sw-local-container {
   display: block;
   position: relative;
   padding: 10px;
-  margin: 0 30px;
-  text-align: center;
-  width: 50%;
-  margin: auto;
+  /* overflow: hidden; */
+  margin: 0 20px;
 }
 .sw-local-name {
   position: relative;
   display: block;
   width: 100%;
 }
-.prev-local-name:after,
-.next-local-name:after {
-  font-size: 2rem;
-  color: #f88222;
-}
-.prev-local-name {
-  top: 102px;
-  right: auto;
-  left: 22%;
-  margin-left: 5px;
-}
-.next-local-name {
-  top: 102px;
-  left: auto;
-  right: 23%;
-}
-/* 시장 소개 내용 */
-.market-info {
-  display: block;
-  position: relative;
-}
-.market-info .title {
-  font-size: 3rem;
-  align-items: center;
-  /* margin-top: 150px; */
-  padding-top: 30px;
-  margin-bottom: 20px !important;
-  font-weight: 700;
-  margin: 0 20px;
-}
-.market-info-contents {
-  margin: 0 50px;
-}
-.market-contents {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-.market-content {
-  display: flex;
-  gap: 20px;
-  width: 100%;
-}
-.market-content1,
-.market-content2 {
-  /* border: 1px solid #5e5e5e; */
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  padding: 30px 20px 50px 20px;
+.market-info-1045 .market-content-right-top {
+  margin: 10px 0;
 }
 /* 오른쪽 */
-.market-content1,
-.market-content2 {
+.market-info-right {
+  width: 60%;
+  /* background-color: #e0e7fb; */
+}
+.market-info-right .market-contents {
+  padding: 50px;
   display: flex;
-  width: 50%;
+}
+.market-info-right .market-contents .market-content1,
+.market-info-right .market-contents .market-content2 {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
   gap: 20px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .market-content-right,
 .market-content-left {
@@ -1223,36 +1353,23 @@ input::placeholder {
 }
 .market-content-left img {
   width: 100%;
-  height: 100%;
   cursor: pointer;
 }
-.go-market {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0 0 0;
-}
-.go-market span {
-  font-size: 1.3rem;
-  color: #00539c;
-}
-.go-market span:hover {
-  font-weight: bold;
-}
-.market-content-right-top {
+.market-content-right .market-content-right-top {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.market-content-right-top span {
+.market-content-right .market-content-right-top p {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.market-content-right .market-content-right-top span {
   font-size: 1.1rem;
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   color: #191919;
   background-color: #fdebc8;
-}
-.market-content-right-top p {
-  font-size: 1.6rem;
-  font-weight: bold;
 }
 .market-adr {
   display: block;
@@ -1264,42 +1381,165 @@ input::placeholder {
   font-size: 1.3rem;
   line-height: 1.5;
   word-break: break-all;
-  color: #5e5e5e;
+  color: #a6a6a6;
+}
+.market-info-right .market-contents .market-content2 {
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+.market-info-right .market-contents {
+  display: none;
 }
 /* 더보기 버튼 */
 .market-contents button {
+  position: absolute;
+  bottom: 20px;
+  left: 68%;
   display: block;
-  margin: 0 auto;
-  border: none;
-  background-color: #8da4d0;
+  transform: translateX(-50%);
   font-size: 1.5rem;
   padding: 5px 3px;
   border-radius: 5px;
   width: 100px;
   cursor: pointer;
-  display: block;
+  border: none;
   color: #fff;
+  background-color: #8da4d0;
+}
+.market-contents button:hover {
+  background-color: #ff9364;
+  color: #fff;
+}
+.market-info > .market-info-contents > .market-contents {
+  display: none;
+}
+.market-info-contents2 {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.market-contents2 .swiper {
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  /* padding: 20px 0; */
+  /* border: 0.5px solid #a6a6a6; */
+  text-align: center;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.market-contents2 .swiper-slide {
+  padding: 20px;
+}
+.market-contents2 .market-content-left {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.market-contents2 .market-content-right {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.market-contents2 .market-adr,
+.market-contents2 .market-content-info {
+  display: block; /* 각 span 요소를 한 줄에 하나씩 표시 */
+  text-align: left; /* span 요소를 왼쪽 정렬 */
+}
+.market-contents2 .market-content-right-top {
+  margin: 15px 0;
+}
+.market-contents2 .market-content-right .market-content-right-top p {
+  font-size: 1.6rem;
+}
+.market-contents2 .market-adr {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #5e5e5e;
+}
+/* 더보기 버튼 */
+.market-contents2 button {
+  /* position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); */
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  padding: 5px 3px;
+  border-radius: 5px;
+  width: 100px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: #8da4d0;
+}
+.prev-local-name:after,
+.next-local-name:after {
+  font-size: 2rem;
+  color: #ff9364;
+}
+.prev-local-name {
+  top: 25px;
+  right: auto;
+  left: -10px;
+}
+.next-local-name {
+  top: 25px;
+  left: auto;
+  right: -5px;
+}
+/* 시장 소개 페이지네이션 */
+.swiper-pagination-marketInfo .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid #fdc3aa;
+  opacity: 1;
+  margin-bottom: 5px !important;
+}
+.swiper-pagination-marketInfo .swiper-pagination-bullet-active {
+  width: 40px;
+  transition: width 0.5s;
+  border-radius: 5px;
+  background: #fdc3aa;
+  border: 1px solid transparent;
+  margin-bottom: 5px !important;
+}
+/* .swiper-pagination-marketInfo {
+  position: relative;
+  top: 0;
+}
+:root {
+  --swiper-theme-color: #ff9364;
+} */
+/* 시장 소개 끝 ================================================== */
+#daegu {
+  display: block;
 }
 /* 지역 축제 =================================================== */
 /* 지역 축제 왼쪽 */
 .local-festival {
   width: 100%;
   padding-left: 50px;
-  margin-top: 200px;
+  margin-top: 100px;
   position: relative;
   display: block;
   background-color: #fff4f4;
-  margin-bottom: 150px;
+  padding-bottom: 90px;
 }
 .local-festival .inner {
   display: flex;
-  height: 580px;
+  height: 600px;
 }
 .local-festival-left {
   position: relative;
   display: block;
   width: 250px;
-  padding: 30px 20px 40px 20px;
+  padding: 90px 20px 40px 20px;
   background-color: #fff4f4;
   /* background-color: #555142; */
 }
@@ -1328,7 +1568,7 @@ input::placeholder {
   font-weight: bold;
   color: #8da4d0;
   position: absolute;
-  bottom: -230px;
+  bottom: -300px;
   left: 120px;
 }
 .prev-festival,
@@ -1342,7 +1582,7 @@ input::placeholder {
   font-weight: bold;
   color: #8da4d0;
   position: absolute;
-  bottom: -230px;
+  bottom: -300px;
   right: 10px;
 }
 /* 지역 축제 오른쪽 */
@@ -1360,7 +1600,7 @@ input::placeholder {
 }
 .sw-festival .swiper-slide {
   border-radius: 5px;
-  margin: 40px 0 30px 0.3%;
+  margin: 90px 0 30px 0.3%;
   background-color: #fff;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   padding-bottom: 50px;
@@ -1390,11 +1630,14 @@ input::placeholder {
   font-size: 1.3rem;
 }
 .swiper-slide button {
+  display: block;
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.5rem;
+  margin: auto;
+  /* margin-top: 100px; */
   padding: 5px 3px;
   border-radius: 5px;
   width: 100px;
@@ -1405,52 +1648,5 @@ input::placeholder {
 }
 .swiper-slide button a {
   color: #fff;
-}
-/* 헤더 반응형 */
-@media screen and (max-width: 1000px) {
-  .hd-right {
-    width: 150px !important;
-  }
-  .hd-right > .my-list > li > button > i {
-    left: -30px !important;
-  }
-  .mypagePhoto {
-    margin-top: 8px;
-  }
-  .my-list span {
-    margin-top: 3px;
-  }
-}
-@media screen and (max-width: 880px) {
-  .my-list img {
-    display: block;
-    width: 35px !important;
-    height: 35px !important;
-  }
-  .hd-right {
-    width: 130px !important;
-  }
-  .hd-right > .my-list > li > button > i {
-    left: -25px !important;
-  }
-  .my-list span {
-    margin-top: 3px !important;
-  }
-}
-@media screen and (max-width: 520px) {
-  .mb-my-list a img {
-    width: 50px !important;
-    height: 50px !important;
-  }
-  .go-out a span {
-    font-size: 1.3rem;
-    margin-top: 20px;
-    margin-left: 0px;
-  }
-  .idNmail span {
-    font-size: 1.5rem;
-  }
-  .idNmail p {
-    font-size: 1.2rem;
-  }
+  display: block;
 }

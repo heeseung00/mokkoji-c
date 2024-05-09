@@ -371,6 +371,7 @@
 .ranking-me.ranking-me-notlogin {
   /* display: none; */
   display: flex;
+  border-radius: 0 0 5px 5px;
 }
 
 .ranking-banner {
@@ -630,7 +631,7 @@
   height: 100%;
   background-color: #ffff;
   overflow: hidden;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   display: flex;
   margin-left: 70px;
 }
@@ -1104,15 +1105,18 @@
     padding: 2% 8%;
   }
 
-  .ranking-banner > ul > li:nth-child(1) {
+  /* .ranking-banner > ul > li:nth-child(1) {
     margin-top: 0;
-  }
+  } */
 }
 
 @media screen and (max-width: 850px) {
   .ranking-banner-txt > .ranking-banner-title {
     font-size: 1.6rem;
     margin-bottom: 7%;
+  }
+  .ranking{
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 820px) {
@@ -1128,11 +1132,11 @@
 }
 
 /* 반응형 */
-@media screen and (max-width: 1660px) {
+/* @media screen and (max-width: 1660px) {
   .review .container {
     margin-left: 50px;
   }
-}
+} */
 
 @media screen and(max-width:1280px) {
   .review .swiper-slide p {
@@ -1293,13 +1297,12 @@
   .review .container {
     width: 100%;
     height: 100%;
-    margin-bottom: 150px;
-    display: flex;
     margin: 0px;
+    margin-bottom: 80px;
+    display: flex;
     gap: 0;
     flex-direction: column;
   }
-
   .review .title-wrap {
     display: flex;
     /* align-items: flex-end; */
@@ -1372,7 +1375,7 @@
 
   /* 중간 배너 */
   .banner-m {
-    margin-bottom: 20px;
+    margin-bottom: 100px;
   }
 
   /* 리뷰 */
@@ -1382,7 +1385,7 @@
 
   /* 이벤트, 오늘의 소식 */
   .reviewToday > .container {
-    margin-bottom: 50px;
+    margin-bottom: 150px;
   }
 }
 
@@ -1435,10 +1438,10 @@
     width: 45% !important;
   }
 
-  .ranking-title {
+  /* .ranking-title {
     margin-top: 25px;
     padding-top: 30px;
-  }
+  } */
 
   .title-wrap {
     display: flex;
@@ -1493,9 +1496,9 @@
     margin-top: 0;
   }
 
-  .review .title-wrap > .title-wrap-all {
+  /* .review .title-wrap > .title-wrap-all {
     margin-top: 11%;
-  }
+  } */
 
   .review .sub-title {
     margin-bottom: 25px;

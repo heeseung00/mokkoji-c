@@ -1,4 +1,51 @@
 window.addEventListener("load", function () {
+  // top 버튼
+  const goTopImg = document.getElementById("go-top-btn-img");
+
+  // 이미지를 클릭했을 때 페이지의 맨 위로 스크롤하는 이벤트 핸들러
+  goTopImg.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+  // 스크롤 이벤트 핸들러
+  window.addEventListener("scroll", function () {
+    // 현재 스크롤 위치를 가져옵니다.
+    var scrollY = window.scrollY || window.pageYOffset;
+    // 현재 창의 높이를 가져옵니다.
+    var windowHeight = window.innerHeight;
+    // 스크롤이 맨 위에 위치하고 현재 창의 높이가 0이 아니라면
+    if (scrollY !== 0 && windowHeight !== 0) {
+      // 이미지를 보이도록 설정합니다.
+      goTopImg.style.display = "block";
+    } else {
+      // 그렇지 않으면 이미지를 숨깁니다.
+      goTopImg.style.display = "none";
+    }
+  });
+
+  // =============================================
+  // // go top 버튼
+  // goTopImg.addEventListener("click", function () {
+  //   toggleImages();
+  // });
+  // window.addEventListener("scroll", function () {
+  //   if (window.scrollY === 0) {
+  //     goDownImg.remove(); // 스크롤 높이가 0일 때 "go_bottom.png" 이미지를 제거합니다.
+  //     goTopImg.src = "images/topbt/go_top.png"; // 이미지를 다시 "go_top.png"로 변경합니다.
+  //   } else {
+  //     if (!document.contains(goDownImg)) {
+  //       // "go_bottom.png" 이미지가 존재하지 않는 경우, 다시 추가합니다.
+  //       document.querySelector(".top-button a").appendChild(goDownImg);
+  //     }
+  //   }
+  // });
+  // function toggleImages() {
+  //   goTopImg.src = "images/topbt/go_bottom.png"; // 이미지를 "go_bottom.png"로 변경합니다.
+  // }
+  // =========================================================================
   // 스크롤 다운 시 헤더 그림자 효과
   var header = document.querySelector(".header");
   window.addEventListener("scroll", function () {
@@ -21,55 +68,55 @@ window.addEventListener("load", function () {
     searchInput.value = ""; // input 내용 리셋
   });
   // =================================================================
-  var menuItems = document.querySelectorAll(".menu-list a");
-  menuItems.forEach(function (item) {
-    item.addEventListener("click", function (event) {
-      // href 속성 값 가져오기
-      var href = this.getAttribute("href");
-      // 만약 href 속성 값이 "#"로 시작하면, 스크롤 효과 적용
-      if (href.startsWith("#")) {
-        event.preventDefault(); // 기본 동작 방지
-        // 대상 섹션의 id 가져오기
-        var targetSectionId = href.substring(1);
-        // 대상 섹션 요소 가져오기
-        var targetSection = document.getElementById(targetSectionId);
-        // 대상 섹션의 페이지 맨 위에서의 거리 계산
-        var offsetTop = targetSection.offsetTop;
-        // 부드러운 스크롤링 효과 적용
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        });
-      }
-    });
-  });
-  // 스크롤 이벤트를 사용하여 현재 보이는 섹션을 감지하고 해당 섹션의 메뉴에 클래스를 추가하여 CSS를 적용합니다.
-  window.addEventListener("scroll", function () {
-    var sections = document.querySelectorAll("section");
-    sections.forEach(function (section) {
-      var bounding = section.getBoundingClientRect();
-      if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
-        var sectionId = section.getAttribute("id");
-        var correspondingMenuItem = document.querySelector('.menu-list li a[href="#' + sectionId + '"]');
-        // 해당 섹션에 대한 메뉴 아이템에 클래스를 추가합니다.
-        menuItems.forEach(function (menuItem) {
-          menuItem.parentElement.classList.remove("active");
-        });
-        correspondingMenuItem.parentElement.classList.add("active");
-      }
-    });
-    // 방문후기 섹션에 대한 예외 처리 추가
-    var visitReviewsSection = document.getElementById("visit-reviews");
-    var visitReviewsMenuItem = document.querySelector('.menu-list li a[href="#visit-reviews"]');
-    var visitReviewsBounding = visitReviewsSection.getBoundingClientRect();
-    if (visitReviewsBounding.top >= 0 && visitReviewsBounding.bottom <= window.innerHeight) {
-      // 방문후기 섹션에 해당하는 메뉴 아이템에 클래스를 추가합니다.
-      menuItems.forEach(function (menuItem) {
-        menuItem.parentElement.classList.remove("active");
-      });
-      visitReviewsMenuItem.parentElement.classList.add("active");
-    }
-  });
+  // var menuItems = document.querySelectorAll(".menu-list a");
+  // menuItems.forEach(function (item) {
+  //   item.addEventListener("click", function (event) {
+  //     // href 속성 값 가져오기
+  //     var href = this.getAttribute("href");
+  //     // 만약 href 속성 값이 "#"로 시작하면, 스크롤 효과 적용
+  //     if (href.startsWith("#")) {
+  //       event.preventDefault(); // 기본 동작 방지
+  //       // 대상 섹션의 id 가져오기
+  //       var targetSectionId = href.substring(1);
+  //       // 대상 섹션 요소 가져오기
+  //       var targetSection = document.getElementById(targetSectionId);
+  //       // 대상 섹션의 페이지 맨 위에서의 거리 계산
+  //       var offsetTop = targetSection.offsetTop;
+  //       // 부드러운 스크롤링 효과 적용
+  //       window.scrollTo({
+  //         top: offsetTop,
+  //         behavior: "smooth",
+  //       });
+  //     }
+  //   });
+  // });
+  // // 스크롤 이벤트를 사용하여 현재 보이는 섹션을 감지하고 해당 섹션의 메뉴에 클래스를 추가하여 CSS를 적용합니다.
+  // window.addEventListener("scroll", function () {
+  //   var sections = document.querySelectorAll("section");
+  //   sections.forEach(function (section) {
+  //     var bounding = section.getBoundingClientRect();
+  //     if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+  //       var sectionId = section.getAttribute("id");
+  //       var correspondingMenuItem = document.querySelector('.menu-list li a[href="#' + sectionId + '"]');
+  //       // 해당 섹션에 대한 메뉴 아이템에 클래스를 추가합니다.
+  //       menuItems.forEach(function (menuItem) {
+  //         menuItem.parentElement.classList.remove("active");
+  //       });
+  //       correspondingMenuItem.parentElement.classList.add("active");
+  //     }
+  //   });
+  //   // 방문후기 섹션에 대한 예외 처리 추가
+  //   var visitReviewsSection = document.getElementById("visit-reviews");
+  //   var visitReviewsMenuItem = document.querySelector('.menu-list li a[href="#visit-reviews"]');
+  //   var visitReviewsBounding = visitReviewsSection.getBoundingClientRect();
+  //   if (visitReviewsBounding.top >= 0 && visitReviewsBounding.bottom <= window.innerHeight) {
+  //     // 방문후기 섹션에 해당하는 메뉴 아이템에 클래스를 추가합니다.
+  //     menuItems.forEach(function (menuItem) {
+  //       menuItem.parentElement.classList.remove("active");
+  //     });
+  //     visitReviewsMenuItem.parentElement.classList.add("active");
+  //   }
+  // });
   // =================================================================
   // 모바일 스크롤 다운 시 헤더 그림자 효과
   var mbheader = document.querySelector(".mb-header");
@@ -783,3 +830,32 @@ window.addEventListener("load", function () {
   });
   // =================================================================
 });
+$(function () {
+  $("#section-nav a").click(function (e) {
+    // "지역별"과 "게시판" 링크를 클릭했을 때는 이벤트를 무시
+    if ($(this).attr("href") === "region-sub.html" || $(this).attr("href") === "notice-board.html") {
+      return;
+    }
+    e.preventDefault();
+    var targetSection = $(this).attr("href");
+    var targetPosition = $(targetSection).offset().top - 150; // 현재 위치에서 100px 아래쪽으로 이동
+    $("html, body").animate(
+      {
+        scrollTop: targetPosition,
+      },
+      10
+    );
+  });
+});
+// footer와 관련된 jQuery 코드
+// $(function () {
+//   var $w = $(window),
+//     footerHei = $(".footer.inner").outerHeight(),
+//     $gotopbt = $(".top-button");
+//   $w.on("scroll", function () {
+//     var sT = $w.scrollTop();
+//     var val = $(document).height() - $w.height() - footerHei;
+//     if (sT >= val) $gotopbt.addClass("on");
+//     else $gotopbt.removeClass("on");
+//   });
+// });

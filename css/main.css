@@ -51,6 +51,28 @@ body {
   /* margin-bottom: 50px; */
   font-weight: 700;
 }
+/* go top 버튼 ===================================================*/
+/* top 버튼 */
+.top-button.on {
+  position: absolute;
+  bottom: 320px;
+}
+.top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  transition: bottom 0.3s ease;
+}
+#go-top-btn-img {
+  width: 50px;
+  cursor: pointer;
+  display: none;
+}
 /* 헤더 ===================================================*/
 .header {
   position: fixed;
@@ -962,7 +984,7 @@ input::placeholder {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   padding-bottom: 50px;
   padding: 20px;
-  height: 400px;
+  height: 410px;
 }
 .best-img {
   position: relative;
@@ -1346,10 +1368,6 @@ input::placeholder {
   color: #fff;
   background-color: #8da4d0;
 }
-.market-contents button:hover {
-  background-color: #ff9364;
-  color: #fff;
-}
 .market-info > .market-info-contents > .market-contents {
   display: none;
 }
@@ -1570,11 +1588,14 @@ input::placeholder {
   font-size: 1.3rem;
 }
 .swiper-slide button {
+  display: block;
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.5rem;
+  margin: auto;
+  /* margin-top: 100px; */
   padding: 5px 3px;
   border-radius: 5px;
   width: 100px;
@@ -1585,4 +1606,5 @@ input::placeholder {
 }
 .swiper-slide button a {
   color: #fff;
+  display: block;
 }
