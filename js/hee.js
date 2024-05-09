@@ -231,7 +231,7 @@ $(function () {
 
   // ===========================================================
   // 게시판
-  $(".review-float").hide();
+  $(".board-review-float").hide();
   // 시장 방문 후기: 버튼 클릭 색깔
   $(".marketReveiw-btn-color").click(function () {
     $(this).addClass("boardOn").siblings().removeClass("boardOn");
