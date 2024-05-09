@@ -1,30 +1,30 @@
 window.addEventListener("load", function () {
-// 리뷰쓰기 탑 버튼모달 창 연결
-const writeBt = document.getElementById("writeBt");
-const myModal = document.getElementById("myModal");
-const closeButton = document.querySelector(".md-top-close");
-writeBt.addEventListener("click", function () {
-  // 모달을 보이도록 스타일을 변경합니다.
-  myModal.style.display = "block";
-  writeBt.style.display = "none";
-  document.body.style.overflow = 'hidden'; // 스크롤 막기
-});
-// 닫기 버튼 클릭 시 모달 닫기
-closeButton.addEventListener("click", function () {
-  // 모달을 닫도록 스타일을 변경합니다.
-  myModal.style.display = "none";
-  writeBt.style.display = "block";
-  document.body.style.overflow = 'auto'; // 스크롤 복구
-});
-// 모달 외부 클릭 시 모달 닫기
-window.addEventListener("click", function (event) {
-  if (event.target == myModal) {
+  // 리뷰쓰기 탑 버튼모달 창 연결
+  const writeBt = document.getElementById("writeBt");
+  const myModal = document.getElementById("myModal");
+  const closeButton = document.querySelector(".md-top-close");
+  writeBt.addEventListener("click", function () {
+    // 모달을 보이도록 스타일을 변경합니다.
+    myModal.style.display = "block";
+    writeBt.style.display = "none";
+    document.body.style.overflow = "hidden"; // 스크롤 막기
+  });
+  // 닫기 버튼 클릭 시 모달 닫기
+  closeButton.addEventListener("click", function () {
     // 모달을 닫도록 스타일을 변경합니다.
     myModal.style.display = "none";
     writeBt.style.display = "block";
-    document.body.style.overflow = 'auto'; // 스크롤 복구
-  }
-});
+    document.body.style.overflow = "auto"; // 스크롤 복구
+  });
+  // 모달 외부 클릭 시 모달 닫기
+  window.addEventListener("click", function (event) {
+    if (event.target == myModal) {
+      // 모달을 닫도록 스타일을 변경합니다.
+      myModal.style.display = "none";
+      writeBt.style.display = "block";
+      document.body.style.overflow = "auto"; // 스크롤 복구
+    }
+  });
   // =================================================
   // 지역 스와이퍼
   var swRecom = new Swiper(".sw-recom-conts", {
@@ -239,6 +239,11 @@ window.addEventListener("click", function (event) {
       document.getElementById("price-error").textContent === "" &&
       document.getElementById("rest_service-error").textContent === ""
     ) {
+      // 모달창 닫기
+      // 예를 들어, 모달의 ID가 "myModal"이라고 가정하면,
+      // 다음과 같이 모달을 닫을 수 있습니다.
+      document.getElementById("myModal").style.display = "none";
+      document.body.style.overflow = "auto"; // 스크롤 복구
       // 모든 입력 필드 초기화
       titleInput.value = "";
       textarea.value = "";

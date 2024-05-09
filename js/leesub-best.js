@@ -239,6 +239,11 @@ window.addEventListener("load", function () {
       document.getElementById("price-error").textContent === "" &&
       document.getElementById("rest_service-error").textContent === ""
     ) {
+      // 모달창 닫기
+      // 예를 들어, 모달의 ID가 "myModal"이라고 가정하면,
+      // 다음과 같이 모달을 닫을 수 있습니다.
+      document.getElementById("myModal").style.display = "none";
+      document.body.style.overflow = "auto"; // 스크롤 복구
       // 모든 입력 필드 초기화
       titleInput.value = "";
       textarea.value = "";
