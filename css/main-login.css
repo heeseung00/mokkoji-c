@@ -72,6 +72,7 @@ body {
   width: 50px;
   cursor: pointer;
   display: none;
+  border-radius: 200px;
 }
 /* 헤더 ===================================================*/
 .header {

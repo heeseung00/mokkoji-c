@@ -54,7 +54,7 @@ body {
 .top-button {
   position: fixed;
   right: 30px;
-  bottom: 60px;
+  bottom: 110px;
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -66,6 +66,40 @@ body {
   width: 50px;
   cursor: pointer;
   display: none;
+  border-radius: 200px;
+}
+.modal-open {
+  overflow: hidden;
+}
+/* 리뷰쓰기 */
+/* 플롯 버튼 */
+.review-float:hover {
+  background-color: #00539c;
+}
+.review-float {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  background-color: #8da4d0;
+  border-radius: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.review-float svg {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 38%;
+  color: #fff;
+}
+.review-float svg path {
+  fill: #fff;
 }
 /* =========================================== */
 /* 베스트 후기 top */
@@ -502,11 +536,7 @@ body {
   color: white;
   font-size: 1.6rem;
   text-align: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
   padding: 20px;
   border-radius: 5px;
 }
