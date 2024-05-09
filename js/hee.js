@@ -187,8 +187,6 @@ window.addEventListener("load", function () {
   //     dynamicBullets: true,
   //   },
   // });
-
-  
 });
 
 // =========================================================================================================
@@ -233,6 +231,7 @@ $(function () {
 
   // ===========================================================
   // 게시판
+  $(".review-float").hide();
   // 시장 방문 후기: 버튼 클릭 색깔
   $(".marketReveiw-btn-color").click(function () {
     $(this).addClass("boardOn").siblings().removeClass("boardOn");
@@ -243,6 +242,9 @@ $(function () {
     $("#pagination2, #pagination3").hide();
     $("p.board-search-txt1").show();
     $("p.board-search-txt2, .board-search-txt3").hide();
+    // 리뷰 플롯 버튼
+    $(".review-float").hide();
+    $(".top-button").css("bottom", "60px");
   });
 
   // 오늘의 소식: 버튼 클릭 색깔
@@ -257,6 +259,9 @@ $(function () {
     $("p.board-search-txt2").show();
     $(".board-search-txt1, .board-search-txt3").hide();
     $("#reviewSlect").hide();
+
+    // 리뷰 플롯 버튼
+    $(".review-float").hide();
   });
 
   // 소통 공간: 버튼 클릭 색깔
@@ -271,5 +276,8 @@ $(function () {
     $("p.board-search-txt3").show();
     $(".board-search-txt1, .board-search-txt2").hide();
     $("#reviewSlect").hide();
+
+    // 리뷰 플롯 버튼
+    $(".review-float").show();
   });
 });
