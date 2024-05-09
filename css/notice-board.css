@@ -27,7 +27,7 @@ a {
 .top-button {
   position: fixed;
   right: 30px;
-  bottom: 107px !important;
+  bottom: 60px;
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -35,6 +35,7 @@ a {
   gap: 30px;
   transition: bottom 0.3s ease;
 }
+
 #go-top-btn-img {
   width: 50px;
   cursor: pointer;
@@ -53,7 +54,7 @@ a {
   background-color: #8da4d0;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: bottom 0.2s;
 }
 
 .review-float:hover {

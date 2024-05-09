@@ -244,7 +244,6 @@ $(function () {
     $("p.board-search-txt2, .board-search-txt3").hide();
     // 리뷰 플롯 버튼
     $(".review-float").hide();
-    $(".top-button").css("bottom", "60px");
   });
 
   // 오늘의 소식: 버튼 클릭 색깔
@@ -279,5 +278,10 @@ $(function () {
 
     // 리뷰 플롯 버튼
     $(".review-float").show();
+    $("#reviewTopBtn").css({
+      position: "fixed",
+      bottom: "107px",
+      display: "block", // 확실히 표시되도록 함
+    });
   });
 });
