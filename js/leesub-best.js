@@ -376,6 +376,7 @@ $(document).ready(function () {
     resetStars(); // 별점 초기화
     $("body").css("overflow", "hidden"); // body 스크롤 막기
     updateTextCount(); // 텍스트 카운트 초기화
+    writeBt.style.display = "none";
   });
   // 모달 닫기 버튼 클릭 시 모달 닫기
   $(".md-top-close").click(function (event) {
