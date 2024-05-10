@@ -123,8 +123,8 @@ body {
 .myprofile .myprofile-img {
   width: 100%;
   display: flex;
-  justify-content: cent
-  margin: 15px 0 30px;
+  justify-content: center;
+  margin: 15px 0 30px !important;
 }
 
 .myprofile .myprofile-img .myprofile-img-wrap {
