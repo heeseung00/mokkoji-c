@@ -123,7 +123,7 @@ body {
 .myprofile .myprofile-img {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: cent
   margin: 15px 0 30px;
 }
 
@@ -204,6 +204,11 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
+}
+
+.mypage-right .mypage-act-content .mypage-con-align:hover .mypage-right .mypage-act .mypage-act-content {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .mypage-right .mypage-act .mypage-act-content i {
@@ -292,9 +297,15 @@ body {
   height: 40px;
   border-radius: 35px;
   /* background-color: #FF9364; */
-  background-color: #f5f2f1;
+  background-color: #f2edea;
   border: transparent;
   color: #191919;
+  cursor: pointer;
+}
+
+.mypage-badge .mypage-badge-title-wrap .mypage-more-btn button:hover {
+  background-color: #ff9364;
+  color: #fff;
 }
 
 .mypage-badge .mypage-badge-wrap {
