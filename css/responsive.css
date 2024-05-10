@@ -520,9 +520,10 @@
   .mb-header > .mb-menu-contents {
     width: 300px;
   }
-  .mb-header > .mb-menu-contents > .mb-my-list img {
-    width: 40px;
-  }
+  /* .mb-header > .mb-menu-contents > .mb-my-list img {
+    width: 50px;
+    height: 50px;
+  } */
   .mb-header > .mb-menu-contents > .mb-my-list > a > span {
     margin: 0 5px 0 15px;
     font-size: 1.8rem;
@@ -602,9 +603,9 @@
     width: 250px;
     padding-left: 30px;
   }
-  .mb-header > .mb-menu-contents > .mb-my-list img {
+  /* .mb-header > .mb-menu-contents > .mb-my-list img {
     width: 35px;
-  }
+  } */
   .mb-header > .mb-menu-contents > .mb-my-list > a > span {
     margin: 0 5px 0 15px;
     font-size: 1.6rem;

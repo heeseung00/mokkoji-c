@@ -1,0 +1,580 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #191919;
+  text-decoration: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #191919;
+  word-break: keep-all;
+  font-size: 10px;
+  position: relative;
+  background-color: #fdfdfdc4;
+}
+/* 공톹요소 */
+.wrap {
+  width: 100%;
+  /* height: 100vw; */
+  position: relative;
+  margin-top: 100px;
+}
+.container {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  /* height: 100%; */
+  margin: 0 auto;
+}
+.title {
+  font-size: 3rem;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding-top: 30px;
+  font-weight: 700;
+  max-width: 1200px !important;
+  margin: 150px auto 50px;
+}
+
+/* 마이페이지 */
+.mypage-sub {
+  width: 100%;
+  height: 950px;
+  display: block;
+  font-size: 1.7rem;
+  margin-bottom: 180px;
+}
+
+.mypage-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 34px;
+}
+
+/* 마이페이지 왼쪽: 프로필 */
+.mypage-wrap .myprofile {
+  width: 35%;
+  height: 530px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fe6b38;
+  padding: 40px 30px;
+  color: #fff;
+  font-weight: 300;
+  /* position: fixed;
+  z-index: 999; */
+}
+
+.myprofile-mobile {
+  display: none;
+}
+
+.myprofile .mypage-eclipse {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.myprofile .mypage-eclipse a {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  font-size: 2.5rem;
+  color: #ffff;
+}
+
+.myprofile .myprofile-level {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.myprofile .myprofile-level span {
+  font-size: 3.5rem;
+}
+
+.myprofile .myprofile-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 30px;
+}
+
+.myprofile .myprofile-img .myprofile-img-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+}
+
+.myprofile .myprofile-img .myprofile-img-wrap img {
+  width: 100%;
+}
+
+.myprofile .myprofile-txt .myprofile-title-txt {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 10px 0 120px;
+}
+.myprofile .myprofile-txt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.myprofile .myprofile-txt .myprofile-img-select {
+  width: 100%;
+}
+
+.myprofile .myprofile-txt .myprofile-img-select a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  color: #fff;
+}
+
+.myprofile-img-select a i {
+  margin-left: 5px;
+}
+
+/* 마이페이지 오른쪽: 상세 */
+.mypage-right {
+  width: 65%;
+  position: relative;
+}
+
+.mypage-right .mypage-act {
+  width: 100%;
+}
+
+/* 오른쪽 공통 */
+.mypage-right .mypage-right-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 80px 0 20px;
+}
+
+.mypage-right .mypage-right-title1 {
+  margin: 0 0 20px !important;
+}
+
+/* 컨텐츠 */
+.mypage-right .mypage-act .mypage-act-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 40px 0px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 6px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04);
+}
+
+.mypage-right .mypage-act-content .mypage-con-align {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mypage-right .mypage-act .mypage-act-content i {
+  font-size: 3.8rem;
+}
+
+.mypage-right .mypage-act-content .mypage-act-img {
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 6px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 33px;
+  padding: 20px 22px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.mypage-right .mypage-act-content .mypage-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 11;
+  background-color: #ff9364;
+  border-radius: 50px;
+  padding: 7px 11px;
+  color: #fff;
+}
+
+/*나의 전통시장 랭킹*/
+.mypage-ranking {
+  width: 100%;
+  position: relative;
+  font-size: 2rem;
+}
+
+.mypage-ranking .mypage-ranking-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 6px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  padding: 20px 30px;
+}
+
+.mypage-ranking-wrap .mypage-ranking-number {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  background-color: #ff9364;
+  border-radius: 35px;
+  padding: 29px 17px;
+}
+
+.mypage-ranking-wrap .mypage-ranking-txt {
+  width: 100%;
+  margin-left: 20px;
+  line-height: 29px;
+}
+
+.mypage-ranking-wrap .mypage-ranking-txt p:nth-child(1) {
+  font-weight: 700;
+}
+
+/* 나의 뱃지 */
+.mypage-badge {
+  position: relative;
+  width: 100%;
+}
+
+.mypage-badge .mypage-badge-title-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mypage-badge .mypage-badge-title-wrap .mypage-more-btn {
+  margin-top: 80px;
+}
+
+.mypage-badge .mypage-badge-title-wrap .mypage-more-btn button {
+  width: 134px;
+  height: 40px;
+  border-radius: 35px;
+  /* background-color: #FF9364; */
+  background-color: #f5f2f1;
+  border: transparent;
+  color: #191919;
+}
+
+.mypage-badge .mypage-badge-wrap {
+  width: 100%;
+  display: flex;
+  gap: 27px;
+}
+
+.mypage-badge .mypage-badge-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  padding: 45px 0;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 6px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04);
+}
+
+.mypage-badge .mypage-badge-1 {
+  width: 25%;
+}
+
+.mypage-badge .mypage-badge-1 > img {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.mypage-badge .mypage-badge-get {
+  width: 25%;
+}
+
+.mypage-badge .mypage-badge-get a {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.mypage-badge .mypage-badge-get a img {
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.footer {
+  position: relative;
+  /* top: 0; */
+  z-index: 9999;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1200px) {
+  .mypage-sub {
+    /* height: 1050px; */
+    height: auto;
+    margin: 100px 0;
+  }
+
+  .mypage-sub .title {
+    margin-top: 100px;
+    padding: 0;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+
+  .mypage-sub .container {
+    background-color: #fbf6f3;
+    padding: 20px 20px;
+  }
+
+  .mypage-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .myprofile {
+    display: none !important;
+  }
+
+  .myprofile-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fe6b38;
+    padding: 20px 35px;
+    color: #fff;
+  }
+
+  .myprofile-mobile .mypage-eclipse {
+    /* width: 100%; */
+    position: absolute !important;
+    top: 10px;
+    right: 10px;
+    display: block;
+    color: #fff;
+  }
+
+  .myprofile-mobile .mypage-eclipse a {
+    color: #fff;
+    font-size: 2.5rem;
+  }
+
+  .myproflie-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* .myprofile-mobile .myprofile-level{
+
+  } */
+
+  .myprofile-mobile .myprofile-img {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 5px 0 0;
+  }
+
+  .myprofile-mobile .myprofile-img .myprofile-img-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+  }
+
+  .myprofile-mobile .myprofile-img .myprofile-img-wrap img {
+    width: 100%;
+  }
+
+  .myprofile-txt .myprofile-title-txt {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .myprofile-txt .myprofile-sub-txt {
+    margin-bottom: 7px;
+  }
+
+  .myprofile-img-select {
+    display: flex;
+  }
+
+  .myprofile-img-select a {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    color: #fff;
+  }
+
+  .myprofile-img-select a p {
+    margin-right: 8px;
+  }
+
+  /* 마이페이지 오른쪽 */
+  .mypage-right {
+    width: 100%;
+  }
+
+  .mypage-badge .mypage-badge-content {
+    width: 285px;
+    padding: 8% 0;
+  }
+
+  .mypage-badge .mypage-badge-1 > img {
+    width: 65%;
+  }
+
+  .mypage-badge .mypage-badge-content {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrap {
+    margin-top: 20px !important;
+  }
+  .mypage-sub {
+    margin-bottom: 70px;
+  }
+  .mypage-sub .title {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  /* 프로필 */
+  .myprofile-mobile {
+    padding: 20px 25px;
+  }
+
+  .myprofile-mobile .myprofile-img .myprofile-img-wrap {
+    width: 60px;
+    height: 60px;
+  }
+
+  .myprofile-level {
+    font-size: 1.2rem;
+  }
+
+  .myprofile-mobile .mypage-eclipse a {
+    font-size: 1.8rem;
+  }
+
+  .myprofile-txt {
+    font-size: 1.2rem;
+  }
+
+  .myprofile-txt .myprofile-sub-txt {
+    font-size: 1.2rem;
+  }
+
+  .myprofile-txt .myprofile-title-txt {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  /* 내 활동 */
+
+  .mypage-right .mypage-act .mypage-act-content {
+    font-size: 1.3rem;
+    /* padding: 24px 0px !important; */
+    padding: 20px 15px;
+
+    justify-content: space-between !important;
+  }
+
+  .mypage-right .mypage-act .mypage-act-content i {
+    font-size: 2rem;
+  }
+
+  .mypage-right .mypage-act-content .mypage-act-img {
+    border-radius: 26px;
+  }
+
+  .mypage-right .mypage-act-content .mypage-number {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    z-index: 11;
+    border-radius: 50px;
+    padding: 6px 9px;
+    font-size: 1.2rem;
+    text-align: end;
+  }
+
+  .mypage-ranking-wrap .mypage-ranking-number {
+    font-size: 2rem;
+    border-radius: 30px;
+    padding: 27px 17px;
+  }
+
+  .mypage-ranking-txt {
+    font-size: 1.5rem;
+    line-height: 21px !important;
+  }
+
+  .mypage-ranking .mypage-ranking-wrap {
+    padding: 20px 15px;
+  }
+
+  .mypage-badge .mypage-badge-title-wrap .mypage-more-btn button {
+    width: 104px;
+    height: 30px;
+    font-size: 1.4rem;
+  }
+  .mypage-badge .mypage-badge-content {
+    margin-top: 10px;
+  }
+
+  .mypage-badge .mypage-badge-wrap {
+    gap: 18px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .mypage-ranking-wrap .mypage-ranking-txt {
+    font-size: 1.3rem !important;
+  }
+}

@@ -1,30 +1,57 @@
 window.addEventListener("load", function () {
+  // // 리뷰쓰기 탑 버튼모달 창 연결
+  // const writeBt = document.getElementById("writeBt");
+  // const myModal = document.getElementById("myModal");
+  // const closeButton = document.querySelector(".md-top-close");
+  // writeBt.addEventListener("click", function () {
+  //   // 모달을 보이도록 스타일을 변경합니다.
+  //   myModal.style.display = "block";
+  //   writeBt.style.display = "none";
+  //   document.body.style.overflow = "hidden"; // 스크롤 막기
+  // });
+  // // 닫기 버튼 클릭 시 모달 닫기
+  // closeButton.addEventListener("click", function () {
+  //   // 모달을 닫도록 스타일을 변경합니다.
+  //   myModal.style.display = "none";
+  //   writeBt.style.display = "block";
+  //   document.body.style.overflow = "auto"; // 스크롤 복구
+  // });
+  // // 모달 외부 클릭 시 모달 닫기
+  // window.addEventListener("click", function (event) {
+  //   if (event.target == myModal) {
+  //     // 모달을 닫도록 스타일을 변경합니다.
+  //     myModal.style.display = "none";
+  //     writeBt.style.display = "block";
+  //     document.body.style.overflow = "auto"; // 스크롤 복구
+  //     return false; // 모달이 닫히지 않도록 기본 동작 막기
+  //   }
+  // });
+  // =================================================
   // 리뷰쓰기 탑 버튼모달 창 연결
   const writeBt = document.getElementById("writeBt");
   const myModal = document.getElementById("myModal");
   const closeButton = document.querySelector(".md-top-close");
   writeBt.addEventListener("click", function () {
-    // 모달을 보이도록 스타일을 변경합니다.
     myModal.style.display = "block";
     writeBt.style.display = "none";
     document.body.style.overflow = "hidden"; // 스크롤 막기
   });
-  // 닫기 버튼 클릭 시 모달 닫기
   closeButton.addEventListener("click", function () {
-    // 모달을 닫도록 스타일을 변경합니다.
-    myModal.style.display = "none";
-    writeBt.style.display = "block";
-    document.body.style.overflow = "auto"; // 스크롤 복구
+    confirmExit(e); // 닫기 버튼 클릭 시 확인
   });
-  // 모달 외부 클릭 시 모달 닫기
   window.addEventListener("click", function (event) {
     if (event.target == myModal) {
-      // 모달을 닫도록 스타일을 변경합니다.
-      myModal.style.display = "none";
-      writeBt.style.display = "block";
-      document.body.style.overflow = "auto"; // 스크롤 복구
+      confirmExit(e); // 모달 외부 클릭 시 확인
     }
   });
+  // function confirmExit() {
+  //   if (confirm("작성한 내용이 지워집니다. 나가시겠습니까?")) {
+  //     resetModalContent();
+  //     myModal.style.display = "none";
+  //     writeBt.style.display = "block";
+  //     document.body.style.overflow = "auto"; // 스크롤 복구
+  //   }
+  // }
   // =================================================
   // 지역 스와이퍼
   var swRecom = new Swiper(".sw-recom-conts", {
@@ -243,6 +270,7 @@ window.addEventListener("load", function () {
       // 예를 들어, 모달의 ID가 "myModal"이라고 가정하면,
       // 다음과 같이 모달을 닫을 수 있습니다.
       document.getElementById("myModal").style.display = "none";
+      writeBt.style.display = "block";
       document.body.style.overflow = "auto"; // 스크롤 복구
       // 모든 입력 필드 초기화
       titleInput.value = "";
@@ -330,7 +358,6 @@ window.addEventListener("load", function () {
   // ============================================
 });
 // ============================================
-// ============================================
 function uncheckAll(checkboxes) {
   checkboxes.forEach((chk) => {
     chk.checked = false;
@@ -400,10 +427,13 @@ $(document).ready(function () {
       // 사용자가 나가기를 확인하면 모달 내용을 초기화하고 모달을 닫습니다.
       resetModalContent();
       $("#myModal").fadeOut();
+      $("#myModal").css("display", "none");
+      $("#writeBt").css("display", "block");
       $("body").css("overflow", "auto"); // body 스크롤 가능하게 하기
     } else {
       // 사용자가 취소를 선택한 경우에는 아무런 작업을 하지 않습니다.
       event.stopPropagation(); // 모달 외부 클릭 이벤트 전파 중지
+      return false;
     }
   }
   // 모달 내용 초기화 함수
