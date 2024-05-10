@@ -4,25 +4,16 @@ window.addEventListener("load", function () {
   const myModal = document.getElementById("myModal");
   const closeButton = document.querySelector(".md-top-close");
   writeBt.addEventListener("click", function () {
-    // 모달을 보이도록 스타일을 변경합니다.
     myModal.style.display = "block";
     writeBt.style.display = "none";
     document.body.style.overflow = "hidden"; // 스크롤 막기
   });
-  // 닫기 버튼 클릭 시 모달 닫기
   closeButton.addEventListener("click", function () {
-    // 모달을 닫도록 스타일을 변경합니다.
-    myModal.style.display = "none";
-    writeBt.style.display = "block";
-    document.body.style.overflow = "auto"; // 스크롤 복구
+    confirmExit(e); // 닫기 버튼 클릭 시 확인
   });
-  // 모달 외부 클릭 시 모달 닫기
   window.addEventListener("click", function (event) {
     if (event.target == myModal) {
-      // 모달을 닫도록 스타일을 변경합니다.
-      myModal.style.display = "none";
-      writeBt.style.display = "block";
-      document.body.style.overflow = "auto"; // 스크롤 복구
+      confirmExit(e); // 모달 외부 클릭 시 확인
     }
   });
   // =================================================
@@ -401,9 +392,12 @@ $(document).ready(function () {
       // 사용자가 나가기를 확인하면 모달 내용을 초기화하고 모달을 닫습니다.
       resetModalContent();
       $("#myModal").fadeOut();
+      $("#myModal").css("display", "none");
+      $("#writeBt").css("display", "block");
       $("body").css("overflow", "auto"); // body 스크롤 가능하게 하기
     } else {
       // 사용자가 취소를 선택한 경우에는 아무런 작업을 하지 않습니다.
+      event.preventDefault(); // 기본 동작 취소
       event.stopPropagation(); // 모달 외부 클릭 이벤트 전파 중지
     }
   }

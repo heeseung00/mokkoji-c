@@ -1,3 +1,5 @@
+
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <!-- Google Tag Manager -->
@@ -40,7 +42,8 @@
     <meta property="og:title" content="모꼬지 ┃ 전통시장의 새로운 트렌드를 만들다." />
     <meta property="og:description" content="모꼬지는 전국 전통시장과 죽기 전에 꼭 가봐야 할 여행지를 소개하는 국내 유일한 시장 및 여행 정보 전문 포털 사이트입니다" />
     <meta property="og:image" content="/images/link-img/thumbnail-01.png" />
-    <meta property="og:url" content="https://mokkoji-a.vercel.app/" />
+    <meta property="og:url" content="https://mokkoji-c.vercel.app/" />
+
     <!-- flaticon -->
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-straight/css/uicons-regular-straight.css" />
@@ -48,49 +51,42 @@
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css" />
     <!-- font aswesom -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- link Swiper's CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
+    <!-- cdn Swiper CSS -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
     <!-- aos css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- css -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
-    <!-- <link rel="stylesheet" href="css/main.css" /> -->
-    <link rel="stylesheet" href="css/hee.css" />
-    <!-- <link rel="stylesheet" href="css/lee.css" /> -->
     <link rel="stylesheet" href="css/main-login.css" />
-
+    <link rel="stylesheet" href="css/hee.css" />
     <link rel="stylesheet" href="css/mypage.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- 제이쿼리 추가 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- aos js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Swiper js -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+    <!-- cdn Swiper js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
     <!-- js -->
     <script src="js/html5shiv.js"></script>
-    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <script src="js/prefixfree.min.js"></script>
     <script src="js/repond.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/hee.js"></script>
-    <script src="js/lee.js"></script>
+    <!-- <script src="js/hee.js"></script> -->
+    <script src="js/mypage.js"></script>
+    <!-- 희승: 시장 후기 사이즈 조절-->
+    <!-- <script src="js/resize_hee.js"></script> -->
     <script src="js/jquery.cookie.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPBSJSB4DE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-SPBSJSB4DE");
-    </script>
   </head>
   <body>
+    <!-- go top -->
+    <div class="top-button">
+      <img src="images/1header/up_bt.jpg" alt="go_top" id="go-top-btn-img" />
+    </div>
     <div class="wrap">
+      <!-- 헤더 -->
       <header class="header">
         <div class="container">
           <div class="inner">
@@ -119,7 +115,8 @@
                 <li><a href="index.html">로그아웃</a></li>
                 <li>
                   <div class="mypagePhoto">
-                    <a href="#"><img src="images/1header/mypageP.png" alt="마이페이지" /></a>
+                    <a href="mypage.html"><img src="images/1header/mypageP.png" alt="마이페이지" /></a>
+
                     <span>마이페이지</span>
                   </div>
                 </li>
@@ -202,9 +199,9 @@
             <i class="fa-solid fa-xmark"></i>
           </div>
           <div class="mb-my-list">
-            <a href="#"><img src="images/1header/mypageP.png" alt="모바일마이페이지" /></a>
+            <a href="mypage.html"><img src="images/1header/mypageP.png" alt="모바일마이페이지" /></a>
             <div class="idNmail">
-              <a href="#"
+              <a href="mypage.html"
                 ><span>망곰이</span>
                 <p>gomi88@naver.com</p>
               </a>
@@ -231,8 +228,8 @@
             <div class="inner">
               <!-- 로고 -->
               <!-- <div class="hd-logo">
-                    <a href="index.html"><img src="images/1header/mb-hd-logo.png" alt="로고" /></a>
-                  </div> -->
+                  <a href="index.html"><img src="images/1header/mb-hd-logo.png" alt="로고" /></a>
+                </div> -->
               <div class="search-contents">
                 <div class="search-content-top">
                   <div class="hd-logo">
